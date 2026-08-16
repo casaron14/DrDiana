@@ -16,12 +16,7 @@ body {
 header {
     padding: 20px 80px;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.header-container {
-    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -38,74 +33,7 @@ header {
 }
 
 
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 8px;
-    gap: 6px;
-}
 
-.menu-toggle span {
-    width: 24px;
-    height: 2.5px;
-    background-color: #14134a;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-    display: block;
-}
-
-.menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(10px, 10px);
-}
-
-.menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
-}
-
-.nav-links {
-    display: flex;
-    gap: 48px;
-    align-items: center;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #14134a;
-    font-size: 0.95rem;
-    font-weight: 500;
-    transition: opacity 0.3s ease;
-    padding: 8px 0;
-    position: relative;
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #f0ec6e;
-    transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after {
-    width: 100%;
-}
-
-.social-icons {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 24px;
-}
 
 .socials {
     display: flex;
@@ -171,21 +99,7 @@ header {
     transform: translateY(-1px);
 }
 
-.vcard-btn {
-    background: linear-gradient(135deg, #e8e5f5 0%, #f0ede0 100%);
-    color: #14134a;
-    min-width: 150px;
-    box-shadow: 8px 8px 0 rgba(20, 19, 74, 0.1);
-}
 
-.vcard-btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 12px 12px 0 rgba(20, 19, 74, 0.15);
-}
-
-.vcard-btn:active {
-    transform: translateY(-1px);
-}
 
 /* ---------- Button Group ---------- */
 .button-group {
@@ -348,10 +262,6 @@ header {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1200px) {
-    .navbar {
-        padding: 32px 48px;
-    }
-
     .hero {
         padding: 50px 48px 80px;
         gap: 30px;
@@ -373,14 +283,6 @@ header {
 }
 
 @media (max-width: 900px) {
-    .navbar {
-        padding: 24px 32px;
-        flex-wrap: wrap;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
 
     .hero {
         padding: 40px 24px 60px;
@@ -391,11 +293,6 @@ header {
 
     .hero-text {
         flex: 1 1 auto;
-    }
-
-    .social-icons {
-        gap: 12px;
-        margin-bottom: 20px;
     }
 
     .button-group {
@@ -455,21 +352,8 @@ header {
 }
 
 @media (max-width: 600px) {
-    header {
-        padding: 16px 20px;
-    }
-
     .logo-image {
         height: 32px;
-    }
-
-    .logo-text {
-        font-size: 0.85rem;
-    }
-
-    .social-icons {
-        gap: 12px;
-        margin-bottom: 20px;
     }
 
     .social-link {
@@ -482,6 +366,10 @@ header {
     .social-link svg {
         width: 18px;
         height: 18px;
+    }
+
+    header {
+        padding: 16px 20px;
     }
 
     .hero {
@@ -513,8 +401,7 @@ header {
         gap: 12px;
     }
 
-    .resume-btn,
-    .vcard-btn {
+    .resume-btn {
         flex: 1;
         min-width: 120px;
         font-size: 0.9rem;
